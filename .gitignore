@@ -57,6 +57,8 @@ ehthumbs.db
 
 # Old/legacy files
 pages-old/
+test/
+samanudfirma.html
 index-old.html
 components/*.html
 base.md

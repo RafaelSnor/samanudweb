@@ -66,7 +66,7 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-item">
                   <div className="contact-text">
-                    <h4>Email</h4>
+                    <h4>Correo Electrónico</h4>
                     <p><a href="mailto:contacto@samanudfirma.com">contacto@samanudfirma.com</a></p>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                 <input type="text" id="name" name="name" placeholder="Tu Nombre" required />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Dirección de Email *</label>
+                <label htmlFor="email">Correo Electrónico *</label>
                 <input type="email" id="email" name="email" placeholder="tu.email@ejemplo.com" required />
               </div>
               <div className="form-group">
@@ -126,9 +126,9 @@ export default function ContactPage() {
       <section className="about" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="map-container">
-            <p>Map View - Office Location</p>
+            <p>Ubicación de Oficina</p>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-lighter)', marginTop: '10px' }}>
-              (Map integration can be added here - Google Maps, Mapbox, etc.)
+              (La integración del mapa se puede agregar aquí - Google Maps, Mapbox, etc.)
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
@@ -13,7 +14,6 @@ export default function Navbar() {
     { href: '/services', label: 'Servicios' },
     { href: '/about', label: 'Sobre Nosotros' },
     { href: '/team', label: 'Equipo' },
-    { href: '/cases', label: 'Casos' },
     { href: '/contact', label: 'Contacto' },
   ]
 
@@ -24,7 +24,7 @@ export default function Navbar() {
         if (window.scrollY > 100) {
           navbar.setAttribute('style', 'box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);')
         } else {
-          navbar.setAttribute('style', 'box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);')
+          navbar.setAttribute('style', 'box-shadow: none;')
         }
       }
     }
@@ -38,7 +38,14 @@ export default function Navbar() {
       <div className="container">
         <div className="nav-wrapper">
           <Link href="/" className="logo">
-            <span className="logo-text">SAMANUD FIRMA</span>
+            <Image 
+              src="/assets/images/logo-transparente.png" 
+              alt="SAMANUD FIRMA" 
+              width={375}
+              height={120}
+              className="logo-image"
+              priority
+            />
           </Link>
           <button 
             className="menu-toggle" 

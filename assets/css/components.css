@@ -15,28 +15,31 @@
 }
 
 .btn-primary {
-    background: var(--secondary);
+    background: #ff5e14;
     color: white;
     box-shadow: var(--shadow);
 }
 
 .btn-primary:hover {
-    background: var(--accent);
+    background: #ff702d;
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
     color: white;
 }
 
 .btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: white;
+    color: var(--primary-dark);
+    border: 2px solid white;
+    box-shadow: var(--shadow);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
-    color: white;
+    background: rgba(255, 255, 255, 0.95);
+    border-color: white;
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .btn-outline {
@@ -128,7 +131,7 @@
 }
 
 .team-info {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
 }
 
 .team-name {
@@ -153,7 +156,7 @@
 
 /* Form Elements */
 .form-group {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 .form-group label {
@@ -193,7 +196,7 @@
 /* Section Header */
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;

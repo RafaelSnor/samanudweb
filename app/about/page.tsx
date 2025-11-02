@@ -66,7 +66,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="services" style={{ paddingTop: 0 }}>
+      <section className="services" style={{ paddingTop: 'var(--spacing-2xl)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-label">Nuestros Valores</span>

@@ -25,29 +25,28 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-section">
-            <h4 className="footer-title">Quick Links</h4>
+            <h4 className="footer-title">Enlaces Rápidos</h4>
             <ul className="footer-links">
               <li><Link href="/">Inicio</Link></li>
               <li><Link href="/services">Servicios</Link></li>
               <li><Link href="/about">Sobre Nosotros</Link></li>
               <li><Link href="/team">Equipo</Link></li>
-              <li><Link href="/cases">Casos</Link></li>
               <li><Link href="/contact">Contacto</Link></li>
             </ul>
           </div>
           <div className="footer-section">
-            <h4 className="footer-title">Practice Areas</h4>
+            <h4 className="footer-title">Áreas de Práctica</h4>
             <ul className="footer-links">
-              <li><Link href="/services">Corporate Law</Link></li>
-              <li><Link href="/services">Real Estate</Link></li>
-              <li><Link href="/services">Family Law</Link></li>
-              <li><Link href="/services">Intellectual Property</Link></li>
-              <li><Link href="/services">Employment Law</Link></li>
-              <li><Link href="/services">Litigation</Link></li>
+              <li><Link href="/services">Derecho Corporativo</Link></li>
+              <li><Link href="/services">Derecho Inmobiliario</Link></li>
+              <li><Link href="/services">Derecho de Familia</Link></li>
+              <li><Link href="/services">Propiedad Intelectual</Link></li>
+              <li><Link href="/services">Derecho Laboral</Link></li>
+              <li><Link href="/services">Litigios</Link></li>
             </ul>
           </div>
           <div className="footer-section">
-            <h4 className="footer-title">Contact Info</h4>
+            <h4 className="footer-title">Información de Contacto</h4>
             <ul className="footer-links">
               <li style={{ color: 'rgba(255,255,255,0.7)' }}>Lima, Perú</li>
               <li><a href="tel:+51907239435">+51 907 239 435</a></li>

@@ -6,17 +6,15 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <>
-      <Navbar />
-      
-      {/* Hero Section */}
+      {/* Hero Section with integrated Navbar */}
       <section id="home" className="hero">
+        <Navbar />
         <div className="hero-overlay"></div>
         <div className="container">
           <div className="hero-content">
-            <h1 className="hero-title">Asesoría Jurídica con Propósito Humano</h1>
+            <h1 className="hero-title">Santa Maria & Nudelman<br />Firma Legal</h1>
             <p className="hero-subtitle">
-              Transformamos la complejidad legal en soluciones que generan confianza. 
-              Brindamos servicios jurídicos integrales con una visión moderna y estratégica.
+              Nuestro compromiso es garantizar la entrega oportuna de proyectos legales de alta calidad.
             </p>
             <div className="hero-buttons">
               <Link href="/contact" className="btn btn-primary">Solicitar Consulta</Link>
@@ -30,90 +28,100 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="services">
+      <section id="services" className="services-landing">
         <div className="container">
-          <div className="section-header">
-            <span className="section-label">Nuestros Servicios</span>
-            <h2 className="section-title">Soluciones Jurídicas Integrales</h2>
-            <p className="section-description">
-              Organizamos nuestra propuesta de valor en dos grandes áreas: servicios para empresas y para personas naturales.
-            </p>
+          <div className="services-landing-header">
+            <h2 className="services-landing-title">Soluciones Jurídicas que Transforman tu Negocio</h2>
+            <p className="services-landing-subtitle">Deja la complejidad legal en nuestras manos. Soluciones rápidas, estratégicas y 100% orientadas a resultados.</p>
           </div>
-          <div className="services-grid">
-            <div className="service-card">
-              <h3 className="service-title">Constitución y Gestión Empresarial</h3>
-              <p className="service-description">
-                Facilitamos la creación, formalización y fortalecimiento de empresas con estructuras sólidas y eficientes. 
-                Constitución Exprés, Profesional y Premium.
-              </p>
+          <div className="services-landing-grid">
+            <div className="services-landing-card">
+              <h3 className="services-landing-card-title">Constitución Empresarial Rápida</h3>
+              <p className="services-landing-card-text">Tu empresa operando en días, no semanas. Constitución Exprés, Profesional y Premium diseñadas para emprendedores que valoran su tiempo.</p>
+              <Link href="/services" className="services-landing-link">Ver Servicios →</Link>
             </div>
-            <div className="service-card">
-              <h3 className="service-title">Propiedad Intelectual y Marcas</h3>
-              <p className="service-description">
-                Protegemos las ideas que te diferencian. Registro de marcas ante INDECOPI, diseños industriales y derechos de autor.
-              </p>
+            <div className="services-landing-card">
+              <h3 className="services-landing-card-title">Protección de Marcas e Innovación</h3>
+              <p className="services-landing-card-text">Blindaje legal completo para tus ideas. Registro de marcas, diseños industriales y derechos de autor ante INDECOPI con respaldo profesional.</p>
+              <Link href="/services" className="services-landing-link">Proteger Ahora →</Link>
             </div>
-            <div className="service-card">
-              <h3 className="service-title">Contratos y Asesoría Legal</h3>
-              <p className="service-description">
-                Convertimos los acuerdos en instrumentos de seguridad y confianza. Diseñamos, revisamos y negociamos contratos con enfoque preventivo.
-              </p>
+            <div className="services-landing-card">
+              <h3 className="services-landing-card-title">Contratos que Previenen Conflictos</h3>
+              <p className="services-landing-card-text">Transformamos acuerdos en garantías. Contratos diseñados con enfoque preventivo que protegen tu empresa y fortalecen relaciones comerciales.</p>
+              <Link href="/services" className="services-landing-link">Crear Contratos →</Link>
             </div>
-            <div className="service-card">
-              <h3 className="service-title">Derecho Corporativo y M&A</h3>
-              <p className="service-description">
-                Acompañamos a compañías en todas sus etapas corporativas: gobierno societario, reorganización y transacciones M&A.
-              </p>
+            <div className="services-landing-card">
+              <h3 className="services-landing-card-title">Estrategia Corporativa y M&A</h3>
+              <p className="services-landing-card-text">Acompañamiento en operaciones complejas. Gobierno societario, fusiones, adquisiciones y reestructuraciones con visión estratégica.</p>
+              <Link href="/services" className="services-landing-link">Asesoría Corporativa →</Link>
             </div>
-            <div className="service-card">
-              <h3 className="service-title">Derecho Inmobiliario</h3>
-              <p className="service-description">
-                Acompañamiento legal integral a promotores, constructores y propietarios en todas las etapas de sus proyectos inmobiliarios.
-              </p>
+            <div className="services-landing-card">
+              <h3 className="services-landing-card-title">Proyectos Inmobiliarios Exitosos</h3>
+              <p className="services-landing-card-text">Gestión legal integral desde estudios de títulos hasta habilitaciones urbanas. Tu proyecto inmobiliario con respaldo jurídico completo.</p>
+              <Link href="/services" className="services-landing-link">Iniciar Proyecto →</Link>
             </div>
-            <div className="service-card">
-              <h3 className="service-title">Litigios y Solución de Controversias</h3>
-              <p className="service-description">
-                Defendemos intereses con estrategia integral y promovemos mecanismos alternativos como conciliación, arbitraje y negociación.
-              </p>
+            <div className="services-landing-card">
+              <h3 className="services-landing-card-title">Defensa Legal Estratégica</h3>
+              <p className="services-landing-card-text">Resolución de controversias con enfoque inteligente. Conciliación, arbitraje y negociación orientados a resultados, no a conflictos.</p>
+              <Link href="/services" className="services-landing-link">Defender Mis Derechos →</Link>
             </div>
+          </div>
+          <div className="services-landing-cta">
+            <p className="services-landing-cta-text">¿No encuentras lo que buscas?</p>
+            <Link href="/contact" className="btn btn-primary">Consulta Personalizada Gratuita</Link>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="about">
+      <section id="about" className="about-landing">
         <div className="container">
-          <div className="about-content">
-            <div className="about-text">
-              <span className="section-label">Sobre Nosotros</span>
-              <h2 className="section-title">Bienvenidos a SAMANUD FIRMA</h2>
-              <p className="about-description">
-                En <strong>SAMANUD FIRMA</strong> brindamos servicios jurídicos integrales con una visión moderna y estratégica. 
-                Acompañamos a empresas y personas en cada etapa de sus decisiones legales, ofreciendo soluciones eficientes, 
-                preventivas y de alto impacto.
+          <div className="about-landing-content">
+            <div className="about-landing-main">
+              <h2 className="about-landing-title">Nosotros somos tu mejor opción</h2>
+              <p className="about-landing-lead">
+                No somos solo abogados. Somos <strong>socios estratégicos</strong> que transforman desafíos legales en oportunidades de crecimiento.
               </p>
-              <p className="about-description">
-                Nuestro propósito es construir relaciones basadas en la confianza, el rigor técnico y la transparencia. 
-                Transformamos la complejidad legal en soluciones que generan confianza.
-              </p>
-              <div className="stats">
-                <div className="stat-item">
-                  <div className="stat-number">2</div>
-                  <div className="stat-label">Áreas de Servicio</div>
+              <div className="about-landing-features">
+                <div className="about-feature">
+                  <h3 className="about-feature-title">Visión Estratégica Moderna</h3>
+                  <p className="about-feature-text">Combinamos rigor jurídico tradicional con metodologías ágiles y tecnología. No esperamos a que surjan problemas: los prevenimos antes de que ocurran.</p>
                 </div>
-                <div className="stat-item">
-                  <div className="stat-number">10+</div>
-                  <div className="stat-label">Servicios Especializados</div>
+                <div className="about-feature">
+                  <h3 className="about-feature-title">Transparencia Total</h3>
+                  <p className="about-feature-text">Sin sorpresas, sin costos ocultos. Nuestros clientes saben exactamente qué esperar en cada paso. Relaciones basadas en confianza mutua, no en términos ambiguos.</p>
                 </div>
-                <div className="stat-item">
-                  <div className="stat-number">100%</div>
-                  <div className="stat-label">Enfoque en el Cliente</div>
+                <div className="about-feature">
+                  <h3 className="about-feature-title">Resultados Medibles</h3>
+                  <p className="about-feature-text">No medimos el éxito por horas facturadas, sino por el impacto real en tu negocio. Empresas operando más rápido, marcas protegidas, proyectos sin obstáculos legales.</p>
                 </div>
               </div>
             </div>
-            <div className="about-image">
-              <div className="image-placeholder"></div>
+            <div className="about-landing-stats">
+              <div className="about-stat-card">
+                <div className="about-stat-number">100%</div>
+                <div className="about-stat-label">Clientes con Resultados Garantizados</div>
+                <div className="about-stat-desc">Cada caso con compromiso de excelencia</div>
+              </div>
+              <div className="about-stat-card">
+                <div className="about-stat-number">10+</div>
+                <div className="about-stat-label">Especialidades Jurídicas</div>
+                <div className="about-stat-desc">Cobertura integral para tu negocio</div>
+              </div>
+              <div className="about-stat-card">
+                <div className="about-stat-number">2</div>
+                <div className="about-stat-label">Fundadores con Experiencia Compartida</div>
+                <div className="about-stat-desc">Visión corporativa + ejecución operativa</div>
+              </div>
+              <div className="about-stat-card">
+                <div className="about-stat-number">0</div>
+                <div className="about-stat-label">Sorpresas o Costos Ocultos</div>
+                <div className="about-stat-desc">Transparencia absoluta desde el día uno</div>
+              </div>
+            </div>
+            <div className="about-landing-cta">
+              <p className="about-cta-text">Conoce cómo podemos transformar tu operación legal</p>
+              <Link href="/about" className="btn btn-primary">Conoce Nuestra Historia Completa</Link>
             </div>
           </div>
         </div>
@@ -187,7 +195,7 @@ export default function Home() {
                 </div>
                 <div className="contact-item">
                   <div className="contact-text">
-                    <h4>Email</h4>
+                    <h4>Correo Electrónico</h4>
                     <p><a href="mailto:contacto@samanudfirma.com">contacto@samanudfirma.com</a></p>
                   </div>
                 </div>
@@ -204,7 +212,7 @@ export default function Home() {
                 <input type="text" id="name" name="name" placeholder="Tu Nombre" required />
               </div>
               <div className="form-group">
-                <input type="email" id="email" name="email" placeholder="Tu Email" required />
+                <input type="email" id="email" name="email" placeholder="Tu Correo Electrónico" required />
               </div>
               <div className="form-group">
                 <input type="tel" id="phone" name="phone" placeholder="Tu Teléfono" />
