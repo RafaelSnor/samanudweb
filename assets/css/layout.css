@@ -13,6 +13,12 @@
     height: var(--navbar-height);
 }
 
+.navbar .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 var(--spacing-lg) 0 var(--spacing-lg);
+}
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -25,7 +31,7 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    padding-left: var(--spacing-xl);
+    padding-left: var(--spacing-2xl);
 }
 
 .logo-image {
@@ -136,9 +142,14 @@
 }
 
 .hero .navbar .container {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding: 0 var(--spacing-lg);
+    max-width: 100%;
+    margin: 0;
+    padding: 0 var(--spacing-lg) 0 var(--spacing-lg);
+}
+
+.hero .logo {
+    padding-left: var(--spacing-2xl);
+    margin-left: 0;
 }
 
 
