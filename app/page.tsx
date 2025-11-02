@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ContactForm from './components/ContactForm'
+import WhatsAppButton from './components/WhatsAppButton'
 import Image from 'next/image'
 
 export default function Home() {
@@ -230,6 +231,8 @@ export default function Home() {
       </section>
 
       <Footer />
+      
+      <WhatsAppButton />
     </>
   )
 }

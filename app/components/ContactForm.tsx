@@ -19,15 +19,33 @@ export default function ContactForm({
     e.preventDefault()
     setSubmitting(true)
     
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const formData = new FormData(form)
     const data = Object.fromEntries(formData)
     
-    // Simulate form submission
-    setTimeout(() => {
-      alert('¡Gracias por tu mensaje! Te responderemos dentro de 24 horas.')
-      e.currentTarget.reset()
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        alert('¡Gracias por tu mensaje! Te responderemos dentro de 24 horas.')
+        form.reset()
+      } else {
+        alert(result.error || 'Hubo un error al enviar tu mensaje. Por favor intenta nuevamente.')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('Hubo un error al enviar tu mensaje. Por favor intenta nuevamente.')
+    } finally {
       setSubmitting(false)
-    }, 1000)
+    }
   }
 
   const serviceOptions = simplifiedServices ? [
