@@ -1,27 +1,9 @@
-'use client'
-
 import Link from 'next/link'
-import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import ContactForm from '../components/ContactForm'
 
 export default function ContactPage() {
-  const [submitting, setSubmitting] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setSubmitting(true)
-    
-    const formData = new FormData(e.currentTarget)
-    const data = Object.fromEntries(formData)
-    
-    // Simulate form submission
-    setTimeout(() => {
-      alert('¡Gracias por tu mensaje! Te responderemos dentro de 24 horas.')
-      e.currentTarget.reset()
-      setSubmitting(false)
-    }, 1000)
-  }
 
   return (
     <>
@@ -78,58 +60,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Nombre Completo *</label>
-                <input type="text" id="name" name="name" placeholder="Tu Nombre" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Correo Electrónico *</label>
-                <input type="email" id="email" name="email" placeholder="tu.email@ejemplo.com" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone">Número de Teléfono</label>
-                <input type="tel" id="phone" name="phone" placeholder="+51 999 999 999" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="service">Servicio Necesario *</label>
-                <select id="service" name="service" required>
-                  <option value="">Selecciona un Servicio</option>
-                  <option value="empresas">Servicios para Empresas</option>
-                  <option value="personas">Servicios para Personas Naturales</option>
-                  <option value="constitucion">Constitución Empresarial</option>
-                  <option value="marcas">Propiedad Intelectual y Marcas</option>
-                  <option value="contratos">Contratos y Asesoría Legal</option>
-                  <option value="corporativo">Derecho Corporativo</option>
-                  <option value="inmobiliario">Derecho Inmobiliario</option>
-                  <option value="familia">Familia y Sucesiones</option>
-                  <option value="litigios">Litigios y Solución de Controversias</option>
-                  <option value="other">Otro</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Mensaje *</label>
-                <textarea id="message" name="message" rows={5} placeholder="Cuéntanos sobre tus necesidades legales..." required></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary btn-block" disabled={submitting}>
-                {submitting ? 'Enviando...' : 'Enviar Mensaje'}
-              </button>
-              <p style={{ marginTop: '15px', fontSize: '0.875rem', color: 'var(--text-light)', textAlign: 'center' }}>
-                Al enviar este formulario, aceptas nuestra Política de Privacidad.
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="about" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="map-container">
-            <p>Ubicación de Oficina</p>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-lighter)', marginTop: '10px' }}>
-              (La integración del mapa se puede agregar aquí - Google Maps, Mapbox, etc.)
-            </p>
+            <ContactForm simplifiedServices={true} />
           </div>
         </div>
       </section>

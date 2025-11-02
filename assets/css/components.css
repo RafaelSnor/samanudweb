@@ -131,7 +131,27 @@
 }
 
 .team-info {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
+}
+
+.team-expertise {
+    font-size: var(--font-size-sm);
+    color: #4682B4;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background: rgba(70, 130, 180, 0.08);
+    border-radius: 6px;
+    border-left: 3px solid #4682B4;
+}
+
+.team-expertise strong {
+    color: var(--primary-dark);
+}
+
+.team-value {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
 }
 
 .team-name {

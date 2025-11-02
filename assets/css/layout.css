@@ -175,11 +175,35 @@
     .hero-title {
         font-size: 48px;
     }
+    
+    .hero-content {
+        padding-left: var(--spacing-md);
+    }
+    
+    .logo {
+        padding-left: var(--spacing-md);
+    }
+    
+    .logo-image {
+        max-height: 80px;
+    }
 }
 
 @media (max-width: 544px) {
     .hero-title {
         font-size: 36px;
+    }
+    
+    .hero-content {
+        padding-left: var(--spacing-sm);
+    }
+    
+    .logo {
+        padding-left: var(--spacing-sm);
+    }
+    
+    .logo-image {
+        max-height: 60px;
     }
 }
 

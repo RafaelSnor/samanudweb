@@ -19,8 +19,8 @@ export default function AboutPage() {
             <span>/</span>
             <span>Sobre Nosotros</span>
           </div>
-          <h1>Sobre SAMANUD FIRMA</h1>
-          <p>Dedicados a la excelencia jurídica y el éxito de nuestros clientes</p>
+          <h1>SAMANUD FIRMA</h1>
+          <p>Firma jurídica especializada en servicios legales integrales para empresas y personas naturales</p>
         </div>
       </section>
 
@@ -29,20 +29,21 @@ export default function AboutPage() {
           <div className="about-content">
             <div className="about-text">
               <span className="section-label">Nuestra Historia</span>
-              <h2 className="section-title">Bienvenidos a SAMANUD FIRMA</h2>
+              <h2 className="section-title">Tu Socio Estratégico en el Mundo Legal</h2>
               <p className="about-description">
-                En <strong>SAMANUD FIRMA</strong> brindamos servicios jurídicos integrales con una visión moderna y estratégica. 
-                Acompañamos a empresas y personas en cada etapa de sus decisiones legales, ofreciendo soluciones eficientes, 
-                preventivas y de alto impacto.
+                En <strong>SAMANUD FIRMA</strong> creemos que el derecho no debe ser una barrera para el crecimiento empresarial, sino un aliado estratégico. 
+                Por eso, combinamos el rigor jurídico tradicional con metodologías modernas y un enfoque proactivo que anticipa desafíos 
+                antes de que se conviertan en problemas.
               </p>
               <p className="about-description">
-                Nuestro propósito es construir relaciones basadas en la confianza, el rigor técnico y la transparencia. 
-                Transformamos la complejidad legal en soluciones que generan confianza.
+                Trabajamos con empresas que buscan más que un proveedor de servicios legales: buscan un socio que comprenda sus objetivos 
+                comerciales y los convierta en realidades jurídicas sólidas. Cada documento, cada estrategia y cada asesoría está diseñada 
+                para proteger tus intereses mientras aceleras tu crecimiento.
               </p>
               <p className="about-description">
-                <strong>&quot;Asesoría jurídica con propósito humano.&quot;</strong> Esta es la filosofía que guía cada uno de nuestros servicios. 
-                Entendemos que detrás de cada caso hay personas y empresas con objetivos, desafíos y aspiraciones. 
-                Por eso, nuestro enfoque va más allá del aspecto técnico-legal: buscamos crear valor real y generar confianza.
+                <strong>Nuestra diferencia:</strong> No medimos nuestro éxito por las horas facturadas, sino por el impacto real en tu negocio. 
+                Empresas que operan con mayor agilidad, proyectos que avanzan sin obstáculos legales, decisiones tomadas con total confianza. 
+                Este es el resultado que obtienen nuestros clientes cuando trabajan con nosotros.
               </p>
             </div>
             <div className="about-image">
@@ -52,55 +53,67 @@ export default function AboutPage() {
           <div className="stats">
             <div className="stat-item">
               <div className="stat-number">2</div>
-              <div className="stat-label">Áreas de Servicio</div>
+              <div className="stat-label">Fundadores Especializados</div>
             </div>
             <div className="stat-item">
               <div className="stat-number">10+</div>
-              <div className="stat-label">Servicios Especializados</div>
+              <div className="stat-label">Áreas de Experiencia Jurídica</div>
             </div>
             <div className="stat-item">
               <div className="stat-number">100%</div>
-              <div className="stat-label">Enfoque en el Cliente</div>
+              <div className="stat-label">Comprometidos con tus Resultados</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="services" style={{ paddingTop: 'var(--spacing-2xl)' }}>
+      <section className="values-section">
         <div className="container">
           <div className="section-header">
             <span className="section-label">Nuestros Valores</span>
             <h2 className="section-title">Lo Que Nos Define</h2>
           </div>
-          <div className="values-grid">
-            <div className="value-card">
-              <h3>Confianza</h3>
-              <p>Construimos relaciones duraderas basadas en la transparencia y la honestidad. Cada cliente confía en nosotros y nosotros nos comprometemos a cumplir con excelencia.</p>
+          <div className="values-showcase">
+            <div className="value-item">
+              <div className="value-icon">01</div>
+              <div className="value-details">
+                <h3>Confianza</h3>
+                <p>Construimos relaciones de largo plazo donde cada compromiso se cumple con excelencia. Tu confianza es nuestro activo más valioso y lo protegemos en cada interacción.</p>
+              </div>
             </div>
-            <div className="value-card">
-              <h3>Rigor Técnico</h3>
-              <p>Mantenemos los más altos estándares de calidad jurídica. Cada documento, cada estrategia y cada solución está respaldada por un análisis profundo y riguroso.</p>
+            <div className="value-item">
+              <div className="value-icon">02</div>
+              <div className="value-details">
+                <h3>Rigor Técnico</h3>
+                <p>Cada estrategia legal está respaldada por análisis profundos y fundamentación sólida. Nuestros estándares de calidad jurídica garantizan que tus decisiones estén siempre bien fundamentadas.</p>
+              </div>
             </div>
-            <div className="value-card">
-              <h3>Transparencia</h3>
-              <p>Comunicación clara y honesta en cada paso del proceso. Nuestros clientes siempre saben qué esperar, sin sorpresas ni costos ocultos.</p>
+            <div className="value-item">
+              <div className="value-icon">03</div>
+              <div className="value-details">
+                <h3>Transparencia</h3>
+                <p>Comunicación directa y honesta en cada etapa. Sabrás exactamente qué esperar, cuándo esperarlo y cuánto costará, sin sorpresas desagradables ni costos ocultos.</p>
+              </div>
             </div>
-            <div className="value-card">
-              <h3>Innovación</h3>
-              <p>Utilizamos tecnología y metodologías modernas para ofrecer servicios ágiles y eficientes, sin comprometer la calidad y el rigor legal.</p>
+            <div className="value-item">
+              <div className="value-icon">04</div>
+              <div className="value-details">
+                <h3>Innovación</h3>
+                <p>Combinamos tecnología y metodologías ágiles para entregar resultados más rápidos, sin sacrificar el rigor jurídico. La eficiencia y la calidad son compatibles en nuestro enfoque.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="hero" style={{ minHeight: 'auto', padding: '80px 0' }}>
+      <section className="hero" style={{ minHeight: 'auto', padding: '35px 0' }}>
         <div className="container">
           <div className="hero-content">
-            <h2 style={{ color: 'white', marginBottom: '20px' }}>Trabaja Con Nosotros</h2>
-            <p style={{ color: 'rgba(255,255,255,0.9)', marginBottom: '30px', fontSize: '1.1rem' }}>
-              Experimenta la diferencia que hace la excelencia jurídica.
+            <h2 style={{ color: 'white', marginBottom: '12px' }}>¿Listo para Acelerar tu Crecimiento Legalmente?</h2>
+            <p style={{ color: 'rgba(255,255,255,0.9)', marginBottom: '18px', fontSize: '1.1rem' }}>
+              Agenda una consulta estratégica y descubre cómo podemos transformar la gestión legal de tu empresa.
             </p>
-            <Link href="/contact" className="btn btn-primary">Empezar</Link>
+            <Link href="/contact" className="btn btn-primary">Solicitar Consulta Gratuita</Link>
           </div>
         </div>
       </section>

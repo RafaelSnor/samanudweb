@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ContactForm from './components/ContactForm'
 import Image from 'next/image'
 
 export default function Home() {
@@ -73,6 +74,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CTA Banner - Only Mobile */}
+      <section className="mobile-cta-banner">
+        <div className="container">
+          <p className="mobile-cta-text">¿No encuentras lo que buscas?</p>
+          <Link href="/contact" className="btn btn-primary">Consulta Personalizada Gratuita</Link>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="about-landing">
         <div className="container">
@@ -124,6 +133,14 @@ export default function Home() {
               <Link href="/about" className="btn btn-primary">Conoce Nuestra Historia Completa</Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* About CTA Banner - Only Mobile */}
+      <section className="mobile-about-cta-banner">
+        <div className="container">
+          <p className="mobile-about-cta-text">Conoce cómo podemos transformar tu operación legal</p>
+          <Link href="/about" className="btn btn-primary">Conoce Nuestra Historia Completa</Link>
         </div>
       </section>
 
@@ -207,35 +224,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <form className="contact-form">
-              <div className="form-group">
-                <input type="text" id="name" name="name" placeholder="Tu Nombre" required />
-              </div>
-              <div className="form-group">
-                <input type="email" id="email" name="email" placeholder="Tu Correo Electrónico" required />
-              </div>
-              <div className="form-group">
-                <input type="tel" id="phone" name="phone" placeholder="Tu Teléfono" />
-              </div>
-              <div className="form-group">
-                <select id="service" name="service" required>
-                  <option value="">Selecciona un Servicio</option>
-                  <option value="empresas">Servicios para Empresas</option>
-                  <option value="personas">Servicios para Personas Naturales</option>
-                  <option value="constitucion">Constitución Empresarial</option>
-                  <option value="marcas">Propiedad Intelectual y Marcas</option>
-                  <option value="contratos">Contratos y Asesoría Legal</option>
-                  <option value="corporativo">Derecho Corporativo</option>
-                  <option value="inmobiliario">Derecho Inmobiliario</option>
-                  <option value="familia">Familia y Sucesiones</option>
-                  <option value="litigios">Litigios y Solución de Controversias</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <textarea id="message" name="message" rows={5} placeholder="Tu Mensaje" required></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary btn-block">Enviar Mensaje</button>
-            </form>
+            <ContactForm simplifiedServices={true} />
           </div>
         </div>
       </section>
