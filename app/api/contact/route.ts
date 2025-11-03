@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     // Para usar esto, necesitas crear una cuenta en https://resend.com y obtener tu API key
     
     const RESEND_API_KEY = process.env.RESEND_API_KEY
-    const TO_EMAIL = process.env.CONTACT_EMAIL || 'contacto@samanudfirma.com'
+    const TO_EMAIL = process.env.CONTACT_EMAIL || 'informes@samanudfirma.com'
 
     if (!RESEND_API_KEY) {
       // Si no hay API key configurada, guardamos el mensaje en consola/logs
@@ -164,7 +164,7 @@ export async function POST(request: NextRequest) {
                       <a href="tel:+51907239435" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">+51 907 239 435</a>
                     </p>
                     <p style="margin: 0; color: rgba(255, 255, 255, 0.7); font-size: 13px;">
-                      <a href="mailto:contacto@samanudfirma.com" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">contacto@samanudfirma.com</a>
+                      <a href="mailto:informes@samanudfirma.com" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">informes@samanudfirma.com</a>
                     </p>
                     <hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 20px 0;">
                     <p style="margin: 0; color: rgba(255, 255, 255, 0.5); font-size: 11px;">
@@ -182,7 +182,7 @@ export async function POST(request: NextRequest) {
 
     // Email para la firma
     const { data, error } = await resend.emails.send({
-      from: 'contacto@samanudfirma.com',
+      from: 'informes@samanudfirma.com',
       to: TO_EMAIL,
       replyTo: email,
       subject: emailSubject,
@@ -254,7 +254,7 @@ export async function POST(request: NextRequest) {
                         <tr>
                           <td style="padding: 8px 0;">
                             <strong style="color: #4682B4; font-weight: 600;">✉️ Email:</strong>
-                            <a href="mailto:contacto@samanudfirma.com" style="color: #4682B4; text-decoration: none; margin-left: 8px;">contacto@samanudfirma.com</a>
+                            <a href="mailto:informes@samanudfirma.com" style="color: #4682B4; text-decoration: none; margin-left: 8px;">informes@samanudfirma.com</a>
                           </td>
                         </tr>
                       </table>
@@ -284,7 +284,7 @@ export async function POST(request: NextRequest) {
                       <a href="tel:+51907239435" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">+51 907 239 435</a>
                     </p>
                     <p style="margin: 0; color: rgba(255, 255, 255, 0.7); font-size: 13px;">
-                      <a href="mailto:contacto@samanudfirma.com" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">contacto@samanudfirma.com</a>
+                      <a href="mailto:informes@samanudfirma.com" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">informes@samanudfirma.com</a>
                     </p>
                     <p style="margin: 20px 0 0; color: rgba(255, 255, 255, 0.5); font-size: 11px;">
                       Este es un mensaje automático. Por favor, no respondas a este correo.
@@ -301,7 +301,7 @@ export async function POST(request: NextRequest) {
 
     // Enviar email de confirmación al cliente
     const { data: clientData, error: clientError } = await resend.emails.send({
-      from: 'contacto@samanudfirma.com',
+      from: 'informes@samanudfirma.com',
       to: email,
       subject: `Hemos recibido tu mensaje ${name}`,
       html: clientEmailHtml,

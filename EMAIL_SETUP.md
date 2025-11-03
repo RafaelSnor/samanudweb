@@ -14,7 +14,7 @@ Crea un archivo `.env.local` en la raíz del proyecto con:
 
 ```
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxx
-CONTACT_EMAIL=contacto@samanudfirma.com
+CONTACT_EMAIL=informes@samanudfirma.com
 ```
 
 Reemplaza `re_xxxxxxxxxxxxxxxxxxxxx` con tu API Key real de Resend.
