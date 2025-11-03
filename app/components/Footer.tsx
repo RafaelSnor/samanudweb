@@ -50,7 +50,7 @@ export default function Footer() {
             <ul className="footer-links">
               <li style={{ color: 'rgba(255,255,255,0.7)' }}>Lima, Perú</li>
               <li><a href="tel:+51907239435">+51 907 239 435</a></li>
-              <li><a href="mailto:contacto@samanudfirma.com">contacto@samanudfirma.com</a></li>
+              <li><a href="mailto:informes@samanudfirma.com">informes@samanudfirma.com</a></li>
               <li><a href="https://www.samanudfirma.com" target="_blank" rel="noopener noreferrer">www.samanudfirma.com</a></li>
             </ul>
           </div>

@@ -214,7 +214,7 @@ export default function Home() {
                 <div className="contact-item">
                   <div className="contact-text">
                     <h4>Correo Electrónico</h4>
-                    <p><a href="mailto:contacto@samanudfirma.com">contacto@samanudfirma.com</a></p>
+                    <p><a href="mailto:informes@samanudfirma.com">informes@samanudfirma.com</a></p>
                   </div>
                 </div>
                 <div className="contact-item">
