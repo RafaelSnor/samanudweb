@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -6,23 +7,19 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <div className="logo">
-              <span className="logo-text">SAMANUD FIRMA</span>
-            </div>
+            <Link href="/" className="footer-logo">
+              <Image 
+                src="/assets/images/logo-transparente.png" 
+                alt="SAMANUD FIRMA" 
+                width={375}
+                height={120}
+                className="footer-logo-image"
+                priority
+              />
+            </Link>
             <p className="footer-description">
               Asesoría jurídica con propósito humano. Transformamos la complejidad legal en soluciones que generan confianza.
             </p>
-            <div style={{ marginTop: '20px' }}>
-              <a href="#" style={{ marginRight: '15px', color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem' }}>
-                <span>in</span>
-              </a>
-              <a href="#" style={{ marginRight: '15px', color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem' }}>
-                <span>tw</span>
-              </a>
-              <a href="#" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem' }}>
-                <span>fb</span>
-              </a>
-            </div>
           </div>
           <div className="footer-section">
             <h4 className="footer-title">Enlaces Rápidos</h4>
@@ -56,7 +53,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 SAMANUD FIRMA. Todos los derechos reservados. | <a href="#" style={{ color: 'rgba(255,255,255,0.6)' }}>Política de Privacidad</a> | <a href="#" style={{ color: 'rgba(255,255,255,0.6)' }}>Términos de Servicio</a></p>
+          <p style={{ color: 'white' }}>&copy; {new Date().getFullYear()} SAMANUD FIRMA. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
