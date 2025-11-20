@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 interface ContactFormProps {
   showLabels?: boolean
@@ -14,6 +14,8 @@ export default function ContactForm({
   simplifiedServices = false 
 }: ContactFormProps) {
   const [submitting, setSubmitting] = useState(false)
+  const formStartTime = useRef<number>(Date.now())
+  const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -21,7 +23,21 @@ export default function ContactForm({
     
     const form = e.currentTarget
     const formData = new FormData(form)
+    
+    // Verificar honeypot (campo oculto que los bots llenan)
+    const honeypot = formData.get('website')
+    if (honeypot) {
+      // Es un bot, no procesar
+      setSubmitting(false)
+      return
+    }
+    
+    // Calcular tiempo transcurrido desde que se cargó el formulario
+    const timeSpent = Math.floor((Date.now() - formStartTime.current) / 1000)
+    
     const data = Object.fromEntries(formData)
+    // Agregar tiempo transcurrido para validación en el servidor
+    const dataWithTime = { ...data, formTime: timeSpent }
     
     try {
       const response = await fetch('/api/contact', {
@@ -29,7 +45,7 @@ export default function ContactForm({
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(dataWithTime),
       })
 
       const result = await response.json()
@@ -67,8 +83,19 @@ export default function ContactForm({
     { value: 'other', label: 'Otro' },
   ]
 
+  // Resetear tiempo cuando el componente se monta
+  useEffect(() => {
+    formStartTime.current = Date.now()
+  }, [])
+
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
+      {/* Honeypot field - oculto para humanos, visible para bots */}
+      <div style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}>
+        <label htmlFor="website">No llenar este campo</label>
+        <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
+      
       <div className="form-group">
         {showLabels && <label htmlFor="name">Nombre Completo *</label>}
         <input type="text" id="name" name="name" placeholder="Tu Nombre" required />
