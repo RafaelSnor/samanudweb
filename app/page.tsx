@@ -157,8 +157,15 @@ export default function Home() {
           </div>
           <div className="team-grid">
             <div className="team-card">
-              <div className="team-image">
-                <div className="team-image-placeholder"></div>
+              <div className="team-image" style={{ position: 'relative' }}>
+                <Image
+                  src="/assets/images/Marco.jpg"
+                  alt="Marco Antonio Santa María Norabuena"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  priority
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
               <div className="team-info">
                 <h3 className="team-name">Marco Antonio Santa María Norabuena</h3>
@@ -171,8 +178,14 @@ export default function Home() {
               </div>
             </div>
             <div className="team-card">
-              <div className="team-image">
-                <div className="team-image-placeholder"></div>
+              <div className="team-image" style={{ position: 'relative' }}>
+                <Image
+                  src="/assets/images/Paula.jpg"
+                  alt="Paula Viviana Nudelman Rosero"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
               <div className="team-info">
                 <h3 className="team-name">Paula Viviana Nudelman Rosero</h3>
