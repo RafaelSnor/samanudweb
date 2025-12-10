@@ -191,7 +191,7 @@ export default function Home() {
                 <h3 className="team-name">Paula Viviana Nudelman Rosero</h3>
                 <p className="team-role">Subgerente & Co-Fundadora</p>
                 <p className="team-bio">
-                  Abogada por la Universidad Cooperativa de Colombia (revalidación en trámite en Perú). 
+                  Abogada por la Universidad Cooperativa de Colombia. 
                   Cuenta con estudios en Derecho Notarial, Registral e Inmobiliario, con énfasis en Tributación, 
                   Formalización y Compliance. Lidera la gestión operativa y la experiencia del cliente.
                 </p>
