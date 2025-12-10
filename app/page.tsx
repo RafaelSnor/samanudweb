@@ -159,7 +159,7 @@ export default function Home() {
             <div className="team-card">
               <div className="team-image" style={{ position: 'relative' }}>
                 <Image
-                  src="https://drive.google.com/file/d/1ePdiSFpDXkcAPXG-e8AcN5WcJDOoNTdv/view?usp=drive_link"
+                  src="https://drive.google.com/uc?export=view&id=1ePdiSFpDXkcAPXG-e8AcN5WcJDOoNTdv"
                   alt="Marco Antonio Santa María Norabuena"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -180,7 +180,7 @@ export default function Home() {
             <div className="team-card">
               <div className="team-image" style={{ position: 'relative' }}>
                 <Image
-                  src="https://drive.google.com/file/d/1saRFbc6UIvVTFviRsFgA3WGCgfGx_1bz/view?usp=drive_link"
+                  src="https://drive.google.com/uc?export=view&id=1saRFbc6UIvVTFviRsFgA3WGCgfGx_1bz"
                   alt="Paula Viviana Nudelman Rosero"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
