@@ -171,7 +171,7 @@ export default function Home() {
                 <h3 className="team-name">Marco Antonio Santa María Norabuena</h3>
                 <p className="team-role">Gerente General & Co-Fundador</p>
                 <p className="team-bio">
-                  Bachiller en Derecho por la Universidad de Lima. Cursa la Maestría en Derecho Civil en la Universidad Nacional Mayor de San Marcos. 
+                  Maestrando y Egresado de la Universidad de Lima. 
                   Cuenta con estudios en Derecho Civil, Inmobiliario, Registral y del Consumidor. 
                   Dirige la visión estratégica, académica y corporativa del Estudio.
                 </p>
