@@ -161,8 +161,8 @@ export default function Home() {
                 <Image
                   src="https://drive.google.com/uc?export=view&id=1ePdiSFpDXkcAPXG-e8AcN5WcJDOoNTdv"
                   alt="Marco Antonio Santa María Norabuena"
-                  width={400}
-                  height={520}
+                  width={500}
+                  height={700}
                   priority
                   className="team-photo"
                 />
@@ -182,8 +182,8 @@ export default function Home() {
                 <Image
                   src="https://drive.google.com/uc?export=view&id=1saRFbc6UIvVTFviRsFgA3WGCgfGx_1bz"
                   alt="Paula Viviana Nudelman Rosero"
-                  width={400}
-                  height={520}
+                  width={500}
+                  height={700}
                   className="team-photo"
                 />
               </div>
