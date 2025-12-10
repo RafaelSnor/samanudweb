@@ -157,14 +157,14 @@ export default function Home() {
           </div>
           <div className="team-grid">
             <div className="team-card">
-              <div className="team-image" style={{ position: 'relative' }}>
+              <div className="team-image">
                 <Image
                   src="https://drive.google.com/uc?export=view&id=1ePdiSFpDXkcAPXG-e8AcN5WcJDOoNTdv"
                   alt="Marco Antonio Santa María Norabuena"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  width={640}
+                  height={800}
                   priority
-                  style={{ objectFit: 'cover' }}
+                  className="team-photo"
                 />
               </div>
               <div className="team-info">
@@ -178,13 +178,13 @@ export default function Home() {
               </div>
             </div>
             <div className="team-card">
-              <div className="team-image" style={{ position: 'relative' }}>
+              <div className="team-image">
                 <Image
                   src="https://drive.google.com/uc?export=view&id=1saRFbc6UIvVTFviRsFgA3WGCgfGx_1bz"
                   alt="Paula Viviana Nudelman Rosero"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                  style={{ objectFit: 'cover' }}
+                  width={640}
+                  height={800}
+                  className="team-photo"
                 />
               </div>
               <div className="team-info">
