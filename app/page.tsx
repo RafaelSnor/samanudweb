@@ -240,7 +240,22 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <ContactForm simplifiedServices={true} />
+            
+            <div className="contact-form-wrapper" style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+              <div className="cal-cta-box" style={{ background: '#f8f9fa', padding: '30px', borderRadius: '12px', textAlign: 'center', border: '1px solid #e5e7eb' }}>
+                <h3 style={{ fontSize: '1.25rem', color: '#1a2332', marginBottom: '12px', fontWeight: '600' }}>¿Prefieres agendar una reunión?</h3>
+                <p style={{ color: '#4b5563', marginBottom: '20px', fontSize: '15px' }}>Programa una videollamada o reunión presencial en el horario que mejor te convenga.</p>
+                <CalButton className="btn btn-primary" text="📅 Agendar Cita" />
+              </div>
+
+              <div className="separator" style={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+                <div style={{ flex: 1, borderBottom: '1px solid #e5e7eb' }}></div>
+                <span style={{ padding: '0 15px', color: '#6b7280', fontSize: '14px', fontWeight: '500' }}>O envíanos un mensaje</span>
+                <div style={{ flex: 1, borderBottom: '1px solid #e5e7eb' }}></div>
+              </div>
+
+              <ContactForm simplifiedServices={true} />
+            </div>
           </div>
         </div>
       </section>
