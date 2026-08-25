@@ -3,12 +3,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import CalButton from './CalButton'
 
 export default function Navbar() {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
+  const navRef = useRef<HTMLDivElement>(null)
 
   const navLinks = [
     { href: '/', label: 'Inicio' },
@@ -34,10 +35,27 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Cerrar el menú al hacer clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setMenuOpen(false)
+      }
+    }
+
+    if (menuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [menuOpen])
+
   return (
     <nav className="navbar">
       <div className="container">
-        <div className="nav-wrapper">
+        <div className="nav-wrapper" ref={navRef}>
           <Link href="/" className="logo">
             <Image 
               src="/assets/images/logo-transparente.png" 
