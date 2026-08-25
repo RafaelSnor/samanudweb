@@ -450,5 +450,30 @@ section {
     .nav-menu.active {
         left: 0;
     }
+    
+    .nav-link {
+        color: var(--primary-dark);
+        font-size: var(--font-size-md);
+        display: block;
+        width: 100%;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+        color: var(--secondary);
+    }
+    
+    .nav-link::after {
+        background: var(--secondary);
+    }
+    
+    .navbar-cta {
+        margin-top: var(--spacing-md);
+        width: 100%;
+        text-align: center;
+    }
 }
 
+.navbar-cta {
+    display: flex;
+    align-items: center;
+}
