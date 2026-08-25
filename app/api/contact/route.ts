@@ -1,5 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+function escapeHtml(str: string): string {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;')
+}
+
 // Mapeo de valores de servicio a sus etiquetas
 const serviceLabels: { [key: string]: string } = {
   // Servicios simplificados (landing)
@@ -17,25 +27,15 @@ const serviceLabels: { [key: string]: string } = {
   'other': 'Otro'
 }
 
-// Rate limiting: almacenar IPs y timestamps
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
-const RATE_LIMIT_WINDOW = 60 * 60 * 1000 // 1 hora
-const MAX_REQUESTS_PER_HOUR = 3 // Máximo 3 envíos por hora por IP (más estricto)
 
-// Palabras clave de spam comunes (expandida)
+// Palabras clave de spam comunes
 const spamKeywords = [
-  'viagra', 'cialis', 'casino', 'poker', 'loan', 'debt', 'credit',
-  'make money', 'work from home', 'get rich', 'click here', 'buy now',
-  'act now', 'limited time', 'urgent', 'winner', 'congratulations',
+  'viagra', 'cialis', 'casino', 'poker',
+  'make money', 'work from home', 'get rich',
   'free money', 'guaranteed', 'no risk', 'investment opportunity',
   'seo services', 'backlinks', 'increase traffic', 'bitcoin', 'crypto',
-  'forex', 'trading', 'binary options', 'weight loss', 'diet pills',
-  'http://', 'https://', 'www.', '.com', '.net', '.org', 'click',
-  'visit', 'website', 'link', 'promo', 'discount', 'offer', 'deal',
-  'cheap', 'affordable', 'best price', 'low cost', 'sale', 'buy',
-  'order now', 'call now', 'email us', 'contact us', 'subscribe',
-  'newsletter', 'unsubscribe', 'opt out', 'marketing', 'advertisement',
-  'ad', 'spam', 'bot', 'automated', 'test', 'testing', 'prueba'
+  'forex', 'binary options', 'weight loss', 'diet pills',
+  'unsubscribe', 'opt out'
 ]
 
 // Dominios de email sospechosos (temporales, desechables)
@@ -44,79 +44,18 @@ const suspiciousEmailDomains = [
   'throwaway.email', 'temp-mail.org', 'getnada.com', 'mohmal.com'
 ]
 
-// Función para obtener IP del cliente
-function getClientIP(request: NextRequest): string {
-  const forwarded = request.headers.get('x-forwarded-for')
-  const realIP = request.headers.get('x-real-ip')
-  const ip = forwarded?.split(',')[0] || realIP || 'unknown'
-  return ip
-}
-
-// Función para limpiar entradas expiradas del rate limit
-function cleanExpiredRateLimits() {
-  const now = Date.now()
-  Array.from(rateLimitMap.entries()).forEach(([ip, record]) => {
-    if (now > record.resetTime) {
-      rateLimitMap.delete(ip)
-    }
-  })
-}
-
-// Función para verificar rate limiting
-function checkRateLimit(ip: string): boolean {
-  const now = Date.now()
-  
-  // Limpiar entradas expiradas periódicamente (cada 100 requests aproximadamente)
-  if (Math.random() < 0.01) {
-    cleanExpiredRateLimits()
-  }
-  
-  const record = rateLimitMap.get(ip)
-
-  if (!record || now > record.resetTime) {
-    // Reset o primera vez
-    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW })
-    return true
-  }
-
-  if (record.count >= MAX_REQUESTS_PER_HOUR) {
-    return false
-  }
-
-  record.count++
-  return true
-}
-
 // Función para detectar spam en el contenido
 function containsSpam(text: string): boolean {
   const lowerText = text.toLowerCase()
   
-  // Verificar palabras clave
+  // Verificar palabras clave de spam
   if (spamKeywords.some(keyword => lowerText.includes(keyword.toLowerCase()))) {
     return true
   }
   
-  // Detectar URLs (spam común)
-  const urlPattern = /(https?:\/\/|www\.)[^\s]+/gi
-  if (urlPattern.test(text)) {
-    return true
-  }
-  
-  // Detectar caracteres repetitivos (ej: "aaaaaa", "111111")
-  const repetitivePattern = /(.)\1{4,}/gi
+  // Detectar caracteres repetitivos excesivos (ej: "aaaaaaaaaa")
+  const repetitivePattern = /(.)\1{9,}/gi
   if (repetitivePattern.test(text)) {
-    return true
-  }
-  
-  // Detectar demasiados números (spam común)
-  const numbersOnly = text.replace(/\D/g, '')
-  if (numbersOnly.length > text.length * 0.5 && text.length > 20) {
-    return true
-  }
-  
-  // Detectar demasiadas mayúsculas (spam común)
-  const uppercaseCount = (text.match(/[A-Z]/g) || []).length
-  if (uppercaseCount > text.length * 0.3 && text.length > 20) {
     return true
   }
   
@@ -142,7 +81,7 @@ function isValidEmail(email: string): boolean {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, email, phone, service, message, website, formTime } = body
+    let { name, email, phone, service, message, website, formTime } = body
 
     // 1. Verificar honeypot (campo oculto) - más estricto
     if (website && website.toString().trim().length > 0) {
@@ -163,34 +102,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 3. Rate limiting
-    const clientIP = getClientIP(request)
-    if (!checkRateLimit(clientIP)) {
-      console.log(`Rate limit excedido para IP: ${clientIP}`)
+    // 4. Validar tiempo mínimo (los bots envían en menos de 4 segundos)
+    if (formTime !== undefined && formTime < 4) {
+      console.log('Spam detectado: formulario enviado muy rápido', { formTime })
       return NextResponse.json(
-        { error: 'Has enviado demasiados mensajes. Por favor intenta más tarde.' },
-        { status: 429 }
+        { error: 'Por favor tómate tu tiempo para completar el formulario.' },
+        { status: 400 }
       )
-    }
-
-    // 4. Validar tiempo mínimo (los humanos tardan al menos 10 segundos)
-    if (formTime !== undefined) {
-      if (formTime < 10) {
-        console.log('Spam detectado: formulario enviado muy rápido', { formTime })
-        return NextResponse.json(
-          { error: 'Por favor tómate tu tiempo para completar el formulario.' },
-          { status: 400 }
-        )
-      }
-      // También rechazar si es demasiado rápido (menos de 10 segundos)
-      if (formTime > 3600) {
-        // Más de 1 hora también es sospechoso (formulario abierto demasiado tiempo)
-        console.log('Spam detectado: formulario abierto demasiado tiempo', { formTime })
-        return NextResponse.json(
-          { error: 'Por favor completa el formulario en un tiempo razonable.' },
-          { status: 400 }
-        )
-      }
     }
 
     // 5. Validar campos requeridos
@@ -220,9 +138,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (messageTrimmed.length < 30 || messageTrimmed.length > 2000) {
+    if (messageTrimmed.length < 5 || messageTrimmed.length > 2000) {
       return NextResponse.json(
-        { error: 'El mensaje debe tener entre 30 y 2000 caracteres.' },
+        { error: 'El mensaje debe tener entre 5 y 2000 caracteres.' },
         { status: 400 }
       )
     }
@@ -246,17 +164,22 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 10. Validar que el mensaje tenga contenido real (no solo espacios, números o caracteres especiales)
-    const messageOnlyText = messageTrimmed.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, '')
-    if (messageOnlyText.length < 15) {
+    // Obtener la etiqueta del servicio
+    const validServices = Object.keys(serviceLabels)
+    if (!validServices.includes(service)) {
       return NextResponse.json(
-        { error: 'El mensaje debe contener al menos 15 letras.' },
+        { error: 'Servicio no válido.' },
         { status: 400 }
       )
     }
+    let serviceLabel = serviceLabels[service]
 
-    // Obtener la etiqueta del servicio
-    const serviceLabel = serviceLabels[service] || service
+    // Escapar variables antes de insertarlas en HTML para evitar inyección
+    name = escapeHtml(name)
+    email = escapeHtml(email)
+    phone = phone ? escapeHtml(phone) : ''
+    message = escapeHtml(message)
+    serviceLabel = escapeHtml(serviceLabel)
 
     // Aquí puedes usar diferentes servicios de email:
     // Opción 1: Resend (recomendado - moderno y fácil)
