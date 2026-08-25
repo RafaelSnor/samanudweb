@@ -434,21 +434,33 @@ section {
     }
 
     .nav-menu {
-        position: fixed;
-        top: var(--navbar-height);
-        left: -100%;
+        position: absolute;
+        top: calc(var(--navbar-height) - 10px);
+        right: var(--spacing-md);
+        left: auto;
         flex-direction: column;
         background: white;
-        width: 100%;
-        padding: var(--spacing-lg);
-        box-shadow: var(--shadow-lg);
-        transition: var(--transition);
-        align-items: flex-start;
-        gap: var(--spacing-lg);
+        width: 260px;
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-xl);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        align-items: stretch;
+        gap: var(--spacing-sm);
+        
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        pointer-events: none;
+        border: 1px solid var(--border);
     }
 
     .nav-menu.active {
-        left: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+        left: auto;
     }
     
     .nav-link {
@@ -456,14 +468,17 @@ section {
         font-size: var(--font-size-md);
         display: block;
         width: 100%;
+        padding: 10px 15px;
+        border-radius: var(--border-radius);
     }
     
     .nav-link:hover, .nav-link.active {
-        color: var(--secondary);
+        color: var(--primary);
+        background-color: var(--background);
     }
     
     .nav-link::after {
-        background: var(--secondary);
+        display: none;
     }
     
     .navbar-cta {
