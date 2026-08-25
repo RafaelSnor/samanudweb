@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ContactForm from './components/ContactForm'
 import WhatsAppButton from './components/WhatsAppButton'
+import CalButton from './components/CalButton'
 import Image from 'next/image'
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
             <div className="hero-buttons">
               <Link href="/contact" className="btn btn-primary">Solicitar Consulta</Link>
               <Link href="/services" className="btn btn-secondary">Nuestros Servicios</Link>
+              <CalButton className="btn btn-primary" text="📅 Agendar Cita" />
             </div>
           </div>
         </div>
