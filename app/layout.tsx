@@ -17,7 +17,6 @@ export default function RootLayout({
     <html lang="es">
       <body>
         {children}
-        <Script src="https://cal.com/embed.js" strategy="lazyOnload" />
       </body>
     </html>
   )
