@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
+import CalButton from './CalButton'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -68,6 +69,12 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            <li className="navbar-cta">
+              <CalButton 
+                className="btn btn-primary btn-sm" 
+                text="📅 Agendar Cita" 
+              />
+            </li>
           </ul>
         </div>
       </div>
