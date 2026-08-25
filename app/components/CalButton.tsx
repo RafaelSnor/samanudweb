@@ -26,7 +26,7 @@ export default function CalButton({
           w.Cal.q = w.Cal.q || []
           p(w.Cal, arguments)
         }
-        ce.q = ce.q || []
+        ;(ce as any).q = (ce as any).q || []
         return ce
       }()
       
