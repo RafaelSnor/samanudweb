@@ -42,32 +42,32 @@ export default function Home() {
             <div className="services-landing-card">
               <h3 className="services-landing-card-title">Constitución Empresarial Rápida</h3>
               <p className="services-landing-card-text">Tu empresa operando en días, no semanas. Constitución Exprés, Profesional y Premium diseñadas para emprendedores que valoran su tiempo.</p>
-              <Link href="/services" className="services-landing-link">Ver Servicios →</Link>
+              <Link href="/services" className="services-landing-link">Ver Servicios</Link>
             </div>
             <div className="services-landing-card">
               <h3 className="services-landing-card-title">Protección de Marcas e Innovación</h3>
               <p className="services-landing-card-text">Blindaje legal completo para tus ideas. Registro de marcas, diseños industriales y derechos de autor ante INDECOPI con respaldo profesional.</p>
-              <Link href="/services" className="services-landing-link">Proteger Ahora →</Link>
+              <Link href="/services" className="services-landing-link">Proteger Ahora</Link>
             </div>
             <div className="services-landing-card">
               <h3 className="services-landing-card-title">Contratos que Previenen Conflictos</h3>
               <p className="services-landing-card-text">Transformamos acuerdos en garantías. Contratos diseñados con enfoque preventivo que protegen tu empresa y fortalecen relaciones comerciales.</p>
-              <Link href="/services" className="services-landing-link">Crear Contratos →</Link>
+              <Link href="/services" className="services-landing-link">Crear Contratos</Link>
             </div>
             <div className="services-landing-card">
               <h3 className="services-landing-card-title">Estrategia Corporativa y M&A</h3>
               <p className="services-landing-card-text">Acompañamiento en operaciones complejas. Gobierno societario, fusiones, adquisiciones y reestructuraciones con visión estratégica.</p>
-              <Link href="/services" className="services-landing-link">Asesoría Corporativa →</Link>
+              <Link href="/services" className="services-landing-link">Asesoría Corporativa</Link>
             </div>
             <div className="services-landing-card">
               <h3 className="services-landing-card-title">Proyectos Inmobiliarios Exitosos</h3>
               <p className="services-landing-card-text">Gestión legal integral desde estudios de títulos hasta habilitaciones urbanas. Tu proyecto inmobiliario con respaldo jurídico completo.</p>
-              <Link href="/services" className="services-landing-link">Iniciar Proyecto →</Link>
+              <Link href="/services" className="services-landing-link">Iniciar Proyecto</Link>
             </div>
             <div className="services-landing-card">
               <h3 className="services-landing-card-title">Defensa Legal Estratégica</h3>
               <p className="services-landing-card-text">Resolución de controversias con enfoque inteligente. Conciliación, arbitraje y negociación orientados a resultados, no a conflictos.</p>
-              <Link href="/services" className="services-landing-link">Defender Mis Derechos →</Link>
+              <Link href="/services" className="services-landing-link">Defender Mis Derechos</Link>
             </div>
           </div>
           <div className="services-landing-cta">
