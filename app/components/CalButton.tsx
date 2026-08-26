@@ -9,7 +9,7 @@ interface CalButtonProps {
 }
 
 export default function CalButton({ 
-  calLink = 'marco-antonio-santa-maria-n-6qqymk', // Enlace real de Cal.com del usuario
+  calLink = 'samanudfirma', // Enlace real de Cal.com del usuario
   text = 'Agendar Consulta',
   className = 'btn btn-primary'
 }: CalButtonProps) {
