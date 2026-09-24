@@ -199,6 +199,98 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            <div className="team-card">
+              <div className="team-image">
+                <div className="team-image-placeholder" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #1E3A8A 0%, #4682B4 100%)', color: 'white' }}>
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span style={{ fontSize: '0.8rem', marginTop: '6px', opacity: 0.8, textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>ABOGADO SOCIO</span>
+                </div>
+              </div>
+              <div className="team-info">
+                <h3 className="team-name">José Arturo Cabrera Garzón</h3>
+                <p className="team-role">Socio — Derecho Registral & Conciliación</p>
+                <p className="team-bio">
+                  Abogado docente universitario (U. de Lima, PUCP) y Conciliador Extrajudicial (MINJUS) con maestría en Solución de Conflictos (USMP). Especialista en derecho registral notarial e inmobiliario.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Socios Estratégicos */}
+          <div className="section-header" style={{ marginTop: '50px' }}>
+            <span className="section-label">Alianzas</span>
+            <h2 className="section-title">Socios Estratégicos</h2>
+            <p className="section-description">
+              Aliados clave multidisciplinarios que fortalecen nuestras capacidades y cobertura legal, financiera, inmobiliaria y tecnológica.
+            </p>
+          </div>
+          <div className="team-grid">
+            <div className="team-card">
+              <div className="team-image">
+                <div className="team-image-placeholder" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)', color: 'white' }}>
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span style={{ fontSize: '0.8rem', marginTop: '6px', opacity: 0.8, textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>MBA. ING. CIVIL</span>
+                </div>
+              </div>
+              <div className="team-info">
+                <h3 className="team-name">Pedro Pachas Segura</h3>
+                <p className="team-role">Socio Estratégico — Proyectos Inmobiliarios</p>
+                <p className="team-bio">
+                  Ingeniero Civil (UNI) con MBA por el PAD de la Universidad de Piura y Darden (U. Virginia). Más de 17 años liderando proyectos inmobiliarios, saneamiento físico-legal y finanzas corporativas.
+                </p>
+              </div>
+            </div>
+
+            <div className="team-card">
+              <div className="team-image">
+                <div className="team-image-placeholder" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)', color: 'white' }}>
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span style={{ fontSize: '0.8rem', marginTop: '6px', opacity: 0.8, textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>ABOGADO CORPORATIVO</span>
+                </div>
+              </div>
+              <div className="team-info">
+                <h3 className="team-name">Glen Joy Nostades Rivera</h3>
+                <p className="team-role">Socio Estratégico — Corporativo & Fideicomisos</p>
+                <p className="team-bio">
+                  Abogado por la PUCP y maestrando en la UNMSM. Ex profesional legal de SUNARP y ex coordinador de garantías bancarias. Especialista en fideicomisos, reorganizaciones societarias y compliance.
+                </p>
+              </div>
+            </div>
+
+            <div className="team-card">
+              <div className="team-image" style={{ background: '#10110F', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ position: 'relative', width: '80px', height: '80px' }}>
+                  <Image
+                    src="/assets/images/conectaya-logo.png"
+                    alt="ConectaYa Digital Logo"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+                <span style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', letterSpacing: '2px', marginTop: '10px' }}>
+                  CONECTAYA
+                </span>
+                <span style={{ fontSize: '0.75rem', marginTop: '4px', color: '#D8FF4F', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>
+                  ALIADO TECNOLÓGICO
+                </span>
+              </div>
+              <div className="team-info">
+                <h3 className="team-name">ConectaYa Digital</h3>
+                <p className="team-role">Socio Estratégico — Software, IA & Procesos</p>
+                <p className="team-bio">
+                  Firma de ingeniería de software, Inteligencia Artificial y optimización de procesos (<a href="https://conectaya.pe" target="_blank" rel="noopener noreferrer" style={{ color: '#4682B4', fontWeight: 600, textDecoration: 'underline' }}>conectaya.pe</a>). Especialistas en automatización e innovación tecnológica legal.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
