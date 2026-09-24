@@ -101,7 +101,7 @@ export default function TeamPage() {
                 <h3 className="team-name">Marco Santa María Norabuena</h3>
                 <p className="team-role">Gerente General & Co-Fundador</p>
                 <div className="team-expertise">
-                  <strong>Especialización:</strong> Derecho Civil, Inmobiliario & Registral
+                  <strong>Especialización:</strong> Derecho Civil, Inmobiliario & Registral Notarial
                 </div>
                 <p className="team-bio">
                   Abogado por la <strong>Universidad de Lima</strong> y maestrando en Derecho Civil por la UNMSM. Lidera la visión estratégica y corporativa del Estudio, convirtiendo retos legales en ventajas competitivas.
