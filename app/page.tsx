@@ -169,7 +169,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="team-info">
-                <h3 className="team-name">José Arturo Cabrera</h3>
+                <h3 className="team-name">José Arturo Cabrera Garzón</h3>
                 <p className="team-role">Registral, Notarial & Conciliación</p>
                 <p className="team-bio">
                   Abogado (UCSM / C.A.A. 07392), Magíster en Solución de Conflictos (USMP), docente universitario (U. de Lima, PUCP) y Conciliador Extrajudicial (MINJUS). Experto en práctica notarial.
@@ -180,14 +180,14 @@ export default function Home() {
               <div className="team-image">
                 <Image
                   src="https://drive.google.com/uc?export=view&id=1saRFbc6UIvVTFviRsFgA3WGCgfGx_1bz"
-                  alt="Paula Nudelman Rosero"
+                  alt="Paula Viviana Nudelman Rosero"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 520px"
                   className="team-photo"
                 />
               </div>
               <div className="team-info">
-                <h3 className="team-name">Paula Nudelman Rosero</h3>
+                <h3 className="team-name">Paula Viviana Nudelman Rosero</h3>
                 <p className="team-role">Subgerente & Co-Fundadora</p>
                 <p className="team-bio">
                   Abogada por la Universidad Cooperativa de Colombia especialista en formalización y compliance. Lidera la gestión operativa del Estudio garantizando eficiencia y seguridad jurídica.
@@ -209,7 +209,7 @@ export default function Home() {
                 <h3 className="team-name">Marco Santa María Norabuena</h3>
                 <p className="team-role">Gerente General & Co-Fundador</p>
                 <p className="team-bio">
-                  Abogado por la Universidad de Lima y maestrando en Derecho Civil (UNMSM). Lidera la visión estratégica y corporativa del Estudio, convirtiendo retos legales en ventajas competitivas.
+                  Formado en la Universidad de Lima y maestrando en Derecho Civil (UNMSM). Lidera la visión estratégica y corporativa del Estudio, convirtiendo retos legales en ventajas competitivas.
                 </p>
               </div>
             </div>

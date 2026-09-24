@@ -47,7 +47,7 @@ export default function TeamPage() {
                 </div>
               </div>
               <div className="team-info">
-                <h3 className="team-name">José Arturo Cabrera</h3>
+                <h3 className="team-name">José Arturo Cabrera Garzón</h3>
                 <p className="team-role">Registral, Notarial & Conciliación</p>
                 <div className="team-expertise">
                   <strong>Especialización:</strong> Derecho Registral Notarial & Solución de Conflictos
@@ -72,10 +72,10 @@ export default function TeamPage() {
                 />
               </div>
               <div className="team-info">
-                <h3 className="team-name">Paula Nudelman Rosero</h3>
+                <h3 className="team-name">Paula Viviana Nudelman Rosero</h3>
                 <p className="team-role">Subgerente & Co-Fundadora</p>
                 <div className="team-expertise">
-                  <strong>Especialización:</strong> Derecho Notarial, Registral, Formalización & Compliance
+                  <strong>Especialización:</strong> Derecho Notarial, Formalización & Compliance
                 </div>
                 <p className="team-bio">
                   Abogada por la <strong>Universidad Cooperativa de Colombia</strong> especialista en formalización y compliance. Lidera la gestión operativa del Estudio garantizando procesos impecables y ágiles.
@@ -104,7 +104,7 @@ export default function TeamPage() {
                   <strong>Especialización:</strong> Derecho Civil, Inmobiliario & Registral Notarial
                 </div>
                 <p className="team-bio">
-                  Abogado por la <strong>Universidad de Lima</strong> y maestrando en Derecho Civil por la UNMSM. Lidera la visión estratégica y corporativa del Estudio, convirtiendo retos legales en ventajas competitivas.
+                  Formado en la <strong>Universidad de Lima</strong> y maestrando en Derecho Civil por la UNMSM. Lidera la visión estratégica y corporativa del Estudio, convirtiendo retos legales en ventajas competitivas.
                 </p>
                 <div className="team-value" style={{ marginTop: 'auto', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
                   <strong style={{ color: '#4682B4' }}>Su enfoque:</strong> Estrategia legal orientada al crecimiento y protección del negocio.
