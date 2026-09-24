@@ -169,8 +169,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="team-info">
-                <h3 className="team-name">José Arturo Cabrera Garzón</h3>
-                <p className="team-role">Socio — Registral, Notarial & Conciliación</p>
+                <h3 className="team-name">José Arturo Cabrera</h3>
+                <p className="team-role">Registral, Notarial & Conciliación</p>
                 <p className="team-bio">
                   Abogado (UCSM / C.A.A. 07392), Magíster en Solución de Conflictos (USMP), docente universitario (U. de Lima, PUCP) y Conciliador Extrajudicial (MINJUS). Experto en práctica notarial.
                 </p>

@@ -47,8 +47,8 @@ export default function TeamPage() {
                 </div>
               </div>
               <div className="team-info">
-                <h3 className="team-name">José Arturo Cabrera Garzón</h3>
-                <p className="team-role">Socio — Registral, Notarial & Conciliación</p>
+                <h3 className="team-name">José Arturo Cabrera</h3>
+                <p className="team-role">Registral, Notarial & Conciliación</p>
                 <div className="team-expertise">
                   <strong>Especialización:</strong> Derecho Registral Notarial & Solución de Conflictos
                 </div>
@@ -75,7 +75,7 @@ export default function TeamPage() {
                 <h3 className="team-name">Paula Nudelman Rosero</h3>
                 <p className="team-role">Subgerente & Co-Fundadora</p>
                 <div className="team-expertise">
-                  <strong>Especialización:</strong> Derecho Notarial, Registral & Compliance
+                  <strong>Especialización:</strong> Derecho Notarial, Registral, Formalización & Compliance
                 </div>
                 <p className="team-bio">
                   Abogada por la <strong>Universidad Cooperativa de Colombia</strong> especialista en formalización y compliance. Lidera la gestión operativa del Estudio garantizando procesos impecables y ágiles.
