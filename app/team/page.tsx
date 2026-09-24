@@ -104,7 +104,7 @@ export default function TeamPage() {
                   <strong>Especialización:</strong> Derecho Registral Notarial & Solución de Conflictos
                 </div>
                 <p className="team-bio">
-                  Abogado (UCSM / C.A.A. 07392), docente universitario (U. de Lima, PUCP) y Conciliador Extrajudicial (MINJUS) con maestría (USMP). Experto en práctica notarial y solución alternativa de disputas.
+                  Abogado (UCSM / C.A.A. 07392), <strong>Magíster en Solución de Conflictos (USMP)</strong>, docente universitario (U. de Lima, PUCP) y Conciliador Extrajudicial (MINJUS). Experto en práctica notarial y resolución de controversias.
                 </p>
                 <div className="team-value" style={{ marginTop: 'auto', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
                   <strong style={{ color: '#4682B4' }}>Su enfoque:</strong> Blindaje notarial y registral con prevención de controversias.
