@@ -48,25 +48,20 @@ export default function TeamPage() {
                 />
               </div>
               <div className="team-info">
-                <h3 className="team-name">Marco Antonio Santa María Norabuena</h3>
+                <h3 className="team-name">Marco Santa María Norabuena</h3>
                 <p className="team-role">Gerente General & Co-Fundador</p>
                 <div className="team-expertise">
-                  <strong>Especialización:</strong> Derecho Civil, Inmobiliario, Registral y del Consumidor
+                  <strong>Especialización:</strong> Derecho Civil, Inmobiliario & Registral
                 </div>
                 <p className="team-bio">
-                  Formado en la prestigiosa <strong>Universidad de Lima</strong>, y actualmente cursando su Maestría en Derecho Civil en 
-                  la <strong>Universidad Nacional Mayor de San Marcos</strong>, Marco lidera la visión estratégica y corporativa del Estudio.
+                  Abogado por la <strong>Universidad de Lima</strong> y maestrando en Derecho Civil por la UNMSM. Lidera la visión estratégica y corporativa del Estudio, convirtiendo retos legales en ventajas competitivas.
                 </p>
-                <p className="team-bio" style={{ marginTop: '15px' }}>
-                  Su enfoque combina rigor académico con visión empresarial práctica. Cada estrategia que desarrolla está diseñada 
-                  para convertir complejidades legales en ventajas competitivas para tu negocio. Bajo su dirección, el Estudio mantiene 
-                  estándares de excelencia que garantizan resultados superiores.
-                </p>
-                <div className="team-value" style={{ marginTop: '15px', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
-                  <strong style={{ color: '#4682B4' }}>Su enfoque:</strong> Transformar cada desafío legal en una oportunidad de crecimiento estratégico.
+                <div className="team-value" style={{ marginTop: 'auto', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
+                  <strong style={{ color: '#4682B4' }}>Su enfoque:</strong> Estrategia legal orientada al crecimiento y protección del negocio.
                 </div>
               </div>
             </div>
+
             <div className="team-card">
               <div className="team-image">
                 <Image
@@ -78,22 +73,16 @@ export default function TeamPage() {
                 />
               </div>
               <div className="team-info">
-                <h3 className="team-name">Paula Viviana Nudelman Rosero</h3>
+                <h3 className="team-name">Paula Nudelman Rosero</h3>
                 <p className="team-role">Subgerente & Co-Fundadora</p>
                 <div className="team-expertise">
-                  <strong>Especialización:</strong> Derecho Notarial, Registral, Inmobiliario, Tributación, Formalización y Compliance
+                  <strong>Especialización:</strong> Derecho Notarial, Registral & Compliance
                 </div>
                 <p className="team-bio">
-                  Abogada formada en la <strong>Universidad Cooperativa de Colombia</strong> (revalidación en trámite en Perú), 
-                  Paula es la fuerza operativa que garantiza la ejecución impecable de cada servicio.
+                  Abogada por la <strong>Universidad Cooperativa de Colombia</strong> especialista en formalización y compliance. Lidera la gestión operativa del Estudio garantizando procesos impecables y ágiles.
                 </p>
-                <p className="team-bio" style={{ marginTop: '15px' }}>
-                  Con expertise multidisciplinario que abarca desde formalización hasta compliance tributario, asegura que cada proceso 
-                  legal se ejecute con precisión, agilidad y resultados medibles. Su liderazgo garantiza que tu experiencia como cliente 
-                  sea excepcional desde el primer contacto hasta la entrega final.
-                </p>
-                <div className="team-value" style={{ marginTop: '15px', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
-                  <strong style={{ color: '#4682B4' }}>Su compromiso:</strong> Tu tranquilidad legal comienza con procesos operativos impecables y resultados predecibles.
+                <div className="team-value" style={{ marginTop: 'auto', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
+                  <strong style={{ color: '#4682B4' }}>Su compromiso:</strong> Ejecución operativa con máxima eficiencia y seguridad jurídica.
                 </div>
               </div>
             </div>
@@ -110,18 +99,15 @@ export default function TeamPage() {
               </div>
               <div className="team-info">
                 <h3 className="team-name">José Arturo Cabrera Garzón</h3>
-                <p className="team-role">Socio — Derecho Registral, Notarial & Conciliación</p>
+                <p className="team-role">Socio — Registral, Notarial & Conciliación</p>
                 <div className="team-expertise">
-                  <strong>Especialización:</strong> Derecho Registral Notarial, Inmobiliario, Comercial y Solución de Conflictos
+                  <strong>Especialización:</strong> Derecho Registral Notarial & Solución de Conflictos
                 </div>
                 <p className="team-bio">
-                  Abogado por la Universidad Cooperativa de Colombia, revalidado en Perú por la Universidad Católica de Santa María (C.A.A. 07392). <strong>Egresado de Maestría en Solución de Conflictos (USMP)</strong> y Conciliador Extrajudicial especializado (MINJUS).
+                  Abogado (UCSM / C.A.A. 07392), docente universitario (U. de Lima, PUCP) y Conciliador Extrajudicial (MINJUS) con maestría (USMP). Experto en práctica notarial y solución alternativa de disputas.
                 </p>
-                <p className="team-bio" style={{ marginTop: '15px' }}>
-                  Docente universitario en la Facultad de Derecho de la Universidad de Lima (Derecho Comercial y Registral Notarial) y la PUCP. Experiencia especializada en práctica notarial (Notaría Gonzales Loli) y resolución alternativa de disputas.
-                </p>
-                <div className="team-value" style={{ marginTop: '15px', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
-                  <strong style={{ color: '#4682B4' }}>Su enfoque:</strong> Blindaje notarial y registral con prevención efectiva de contingencias y controversias.
+                <div className="team-value" style={{ marginTop: 'auto', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
+                  <strong style={{ color: '#4682B4' }}>Su enfoque:</strong> Blindaje notarial y registral con prevención de controversias.
                 </div>
               </div>
             </div>

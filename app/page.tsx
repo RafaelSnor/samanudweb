@@ -162,7 +162,7 @@ export default function Home() {
               <div className="team-image">
                 <Image
                   src="https://drive.google.com/uc?export=view&id=1ePdiSFpDXkcAPXG-e8AcN5WcJDOoNTdv"
-                  alt="Marco Antonio Santa María Norabuena"
+                  alt="Marco Santa María Norabuena"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 520px"
                   priority
@@ -170,12 +170,10 @@ export default function Home() {
                 />
               </div>
               <div className="team-info">
-                <h3 className="team-name">Marco Antonio Santa María Norabuena</h3>
+                <h3 className="team-name">Marco Santa María Norabuena</h3>
                 <p className="team-role">Gerente General & Co-Fundador</p>
                 <p className="team-bio">
-                  Maestrando y Egresado de la Universidad de Lima. 
-                  Cuenta con estudios en Derecho Civil, Inmobiliario, Registral y del Consumidor. 
-                  Dirige la visión estratégica, académica y corporativa del Estudio.
+                  Abogado por la Universidad de Lima y maestrando en Derecho Civil (UNMSM). Lidera la visión estratégica y corporativa del Estudio, convirtiendo retos legales en ventajas competitivas.
                 </p>
               </div>
             </div>
@@ -183,19 +181,17 @@ export default function Home() {
               <div className="team-image">
                 <Image
                   src="https://drive.google.com/uc?export=view&id=1saRFbc6UIvVTFviRsFgA3WGCgfGx_1bz"
-                  alt="Paula Viviana Nudelman Rosero"
+                  alt="Paula Nudelman Rosero"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 520px"
                   className="team-photo"
                 />
               </div>
               <div className="team-info">
-                <h3 className="team-name">Paula Viviana Nudelman Rosero</h3>
+                <h3 className="team-name">Paula Nudelman Rosero</h3>
                 <p className="team-role">Subgerente & Co-Fundadora</p>
                 <p className="team-bio">
-                  Abogada por la Universidad Cooperativa de Colombia. 
-                  Cuenta con estudios en Derecho Notarial, Registral e Inmobiliario, con énfasis en Tributación, 
-                  Formalización y Compliance. Lidera la gestión operativa y la experiencia del cliente.
+                  Abogada por la Universidad Cooperativa de Colombia especialista en formalización y compliance. Lidera la gestión operativa del Estudio garantizando eficiencia y seguridad jurídica.
                 </p>
               </div>
             </div>
@@ -211,9 +207,9 @@ export default function Home() {
               </div>
               <div className="team-info">
                 <h3 className="team-name">José Arturo Cabrera Garzón</h3>
-                <p className="team-role">Socio — Derecho Registral & Conciliación</p>
+                <p className="team-role">Socio — Registral, Notarial & Conciliación</p>
                 <p className="team-bio">
-                  Abogado docente universitario (U. de Lima, PUCP) y Conciliador Extrajudicial (MINJUS) con maestría en Solución de Conflictos (USMP). Especialista en derecho registral notarial e inmobiliario.
+                  Abogado (UCSM / C.A.A. 07392), docente universitario (U. de Lima, PUCP) y Conciliador Extrajudicial (MINJUS) con maestría (USMP). Experto en práctica notarial y prevención de controversias.
                 </p>
               </div>
             </div>
