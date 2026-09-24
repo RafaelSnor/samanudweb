@@ -161,7 +161,7 @@ export default function TeamPage() {
                 <h3 className="team-name">Glen Nostades Rivera</h3>
                 <p className="team-role">Socio Estratégico — Corporativo & Fideicomisos</p>
                 <div className="team-expertise">
-                  <strong>Especialización:</strong> Fideicomisos & Reorganizaciones Societarias
+                  <strong>Especialización:</strong> Fideicomisos & Reorganizaciones Societarias y Corporativas
                 </div>
                 <p className="team-bio">
                   Abogado por la <strong>PUCP</strong> y maestrando en la UNMSM. Ex calificador/profesional legal en SUNARP y ex coordinador de garantías bancarias, especialista en fideicomisos, due diligence y contratos financieros.
