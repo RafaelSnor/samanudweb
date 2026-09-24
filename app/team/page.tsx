@@ -38,26 +38,25 @@ export default function TeamPage() {
           <div className="team-grid">
             <div className="team-card">
               <div className="team-image">
-                <Image
-                  src="https://drive.google.com/uc?export=view&id=1ePdiSFpDXkcAPXG-e8AcN5WcJDOoNTdv"
-                  alt="Marco Antonio Santa María Norabuena"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 520px"
-                  priority
-                  className="team-photo"
-                />
+                <div className="team-image-placeholder" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #1E3A8A 0%, #4682B4 100%)', color: 'white' }}>
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span style={{ fontSize: '0.85rem', marginTop: '8px', opacity: 0.8, textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>ABOGADO SOCIO</span>
+                </div>
               </div>
               <div className="team-info">
-                <h3 className="team-name">Marco Santa María Norabuena</h3>
-                <p className="team-role">Gerente General & Co-Fundador</p>
+                <h3 className="team-name">José Arturo Cabrera Garzón</h3>
+                <p className="team-role">Socio — Registral, Notarial & Conciliación</p>
                 <div className="team-expertise">
-                  <strong>Especialización:</strong> Derecho Civil, Inmobiliario & Registral
+                  <strong>Especialización:</strong> Derecho Registral Notarial & Solución de Conflictos
                 </div>
                 <p className="team-bio">
-                  Abogado por la <strong>Universidad de Lima</strong> y maestrando en Derecho Civil por la UNMSM. Lidera la visión estratégica y corporativa del Estudio, convirtiendo retos legales en ventajas competitivas.
+                  Abogado (UCSM / C.A.A. 07392), <strong>Magíster en Solución de Conflictos (USMP)</strong>, docente universitario (U. de Lima, PUCP) y Conciliador Extrajudicial (MINJUS). Experto en práctica notarial y resolución de controversias.
                 </p>
                 <div className="team-value" style={{ marginTop: 'auto', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
-                  <strong style={{ color: '#4682B4' }}>Su enfoque:</strong> Estrategia legal orientada al crecimiento y protección del negocio.
+                  <strong style={{ color: '#4682B4' }}>Su enfoque:</strong> Blindaje notarial y registral con prevención de controversias.
                 </div>
               </div>
             </div>
@@ -89,25 +88,26 @@ export default function TeamPage() {
 
             <div className="team-card">
               <div className="team-image">
-                <div className="team-image-placeholder" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #1E3A8A 0%, #4682B4 100%)', color: 'white' }}>
-                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
-                  <span style={{ fontSize: '0.85rem', marginTop: '8px', opacity: 0.8, textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>ABOGADO SOCIO</span>
-                </div>
+                <Image
+                  src="https://drive.google.com/uc?export=view&id=1ePdiSFpDXkcAPXG-e8AcN5WcJDOoNTdv"
+                  alt="Marco Antonio Santa María Norabuena"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 520px"
+                  priority
+                  className="team-photo"
+                />
               </div>
               <div className="team-info">
-                <h3 className="team-name">José Arturo Cabrera Garzón</h3>
-                <p className="team-role">Socio — Registral, Notarial & Conciliación</p>
+                <h3 className="team-name">Marco Santa María Norabuena</h3>
+                <p className="team-role">Gerente General & Co-Fundador</p>
                 <div className="team-expertise">
-                  <strong>Especialización:</strong> Derecho Registral Notarial & Solución de Conflictos
+                  <strong>Especialización:</strong> Derecho Civil, Inmobiliario & Registral
                 </div>
                 <p className="team-bio">
-                  Abogado (UCSM / C.A.A. 07392), <strong>Magíster en Solución de Conflictos (USMP)</strong>, docente universitario (U. de Lima, PUCP) y Conciliador Extrajudicial (MINJUS). Experto en práctica notarial y resolución de controversias.
+                  Abogado por la <strong>Universidad de Lima</strong> y maestrando en Derecho Civil por la UNMSM. Lidera la visión estratégica y corporativa del Estudio, convirtiendo retos legales en ventajas competitivas.
                 </p>
                 <div className="team-value" style={{ marginTop: 'auto', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
-                  <strong style={{ color: '#4682B4' }}>Su enfoque:</strong> Blindaje notarial y registral con prevención de controversias.
+                  <strong style={{ color: '#4682B4' }}>Su enfoque:</strong> Estrategia legal orientada al crecimiento y protección del negocio.
                 </div>
               </div>
             </div>
