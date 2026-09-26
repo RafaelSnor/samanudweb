@@ -64,7 +64,7 @@ export default function TeamPage() {
             <div className="team-card">
               <div className="team-image">
                 <Image
-                  src="https://drive.google.com/uc?export=view&id=1saRFbc6UIvVTFviRsFgA3WGCgfGx_1bz"
+                  src="/assets/images/paula.jpg"
                   alt="Paula Viviana Nudelman Rosero"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 520px"
