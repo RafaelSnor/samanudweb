@@ -15,7 +15,8 @@ export default function Home() {
         <div className="hero-overlay"></div>
         <div className="container">
           <div className="hero-content">
-            <h1 className="hero-title">Santa Maria & Nudelman<br />Firma Legal</h1>
+            <h1 className="hero-title">SAMANUD</h1>
+            <p className="hero-descriptor">Santa Maria & Nudelman<br />Firma Legal</p>
             <p className="hero-subtitle">
               Nuestro compromiso es garantizar la entrega oportuna de proyectos legales de alta calidad.
             </p>
