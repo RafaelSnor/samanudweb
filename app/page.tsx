@@ -112,7 +112,7 @@ export default function Home() {
             <div className="about-landing-stats">
               <div className="about-stat-card">
                 <div className="about-stat-number">100%</div>
-                <div className="about-stat-label">Clientes con Resultados Garantizados</div>
+                <div className="about-stat-label">De Casos con Seguimiento Directo de un Socio</div>
                 <div className="about-stat-desc">Cada caso con compromiso de excelencia</div>
               </div>
               <div className="about-stat-card">
