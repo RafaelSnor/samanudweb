@@ -263,31 +263,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="team-card">
-              <div className="team-image" style={{ background: '#10110F', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ position: 'relative', width: '80px', height: '80px' }}>
-                  <Image
-                    src="/assets/images/conectaya-logo.png"
-                    alt="ConectaYa Digital Logo"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-                <span style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', letterSpacing: '2px', marginTop: '10px' }}>
-                  CONECTAYA
-                </span>
-                <span style={{ fontSize: '0.75rem', marginTop: '4px', color: '#D8FF4F', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>
-                  ALIADO TECNOLÓGICO
-                </span>
-              </div>
-              <div className="team-info">
-                <h3 className="team-name">ConectaYa Digital</h3>
-                <p className="team-role">Socio Estratégico — Software, IA & Procesos</p>
-                <p className="team-bio">
-                  Firma de ingeniería de software, Inteligencia Artificial y optimización de procesos (<a href="https://conectaya.pe" target="_blank" rel="noopener noreferrer" style={{ color: '#4682B4', fontWeight: 600, textDecoration: 'underline' }}>conectaya.pe</a>). Especialistas en automatización e innovación tecnológica legal.
-                </p>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>

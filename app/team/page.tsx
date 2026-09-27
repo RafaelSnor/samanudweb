@@ -172,37 +172,7 @@ export default function TeamPage() {
               </div>
             </div>
 
-            <div className="team-card">
-              <div className="team-image" style={{ background: '#10110F', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ position: 'relative', width: '90px', height: '90px' }}>
-                  <Image
-                    src="/assets/images/conectaya-logo.png"
-                    alt="ConectaYa Digital Logo"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-                <span style={{ fontSize: '1.1rem', fontWeight: 700, color: '#FFFFFF', letterSpacing: '2px', marginTop: '12px' }}>
-                  CONECTAYA
-                </span>
-                <span style={{ fontSize: '0.75rem', marginTop: '4px', color: '#D8FF4F', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>
-                  ALIADO TECNOLÓGICO
-                </span>
-              </div>
-              <div className="team-info">
-                <h3 className="team-name">ConectaYa Digital</h3>
-                <p className="team-role">Socio Estratégico — Software, IA & Procesos</p>
-                <div className="team-expertise">
-                  <strong>Especialización:</strong> Inteligencia Artificial & Transformación Digital
-                </div>
-                <p className="team-bio">
-                  Firma de ingeniería de software, Inteligencia Artificial y optimización de procesos (<a href="https://conectaya.pe" target="_blank" rel="noopener noreferrer" style={{ color: '#4682B4', fontWeight: 600, textDecoration: 'underline' }}>conectaya.pe</a>). Especialistas en automatización e innovación tecnológica legal.
-                </p>
-                <div className="team-value" style={{ marginTop: 'auto', padding: '12px', background: 'rgba(70, 130, 180, 0.05)', borderRadius: '8px' }}>
-                  <strong style={{ color: '#4682B4' }}>Aporte estratégico:</strong> Inteligencia artificial aplicada, optimización de procesos e infraestructura digital.
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
